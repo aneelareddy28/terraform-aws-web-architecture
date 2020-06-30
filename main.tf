@@ -32,3 +32,14 @@ module "storage" {
   source = "./storage"
 }
 ###################################################
+
+#--------mdouel networking for vpc,subnets,routes,IG,nat-GW------------
+  
+module "network" {
+    source = "./networking"
+    cidrblock = var.cidrblock
+    accessIp = var.accessIp
+    cidr_public = var.cidr_public
+    cidr_private = var.cidr_private
+}
+#######################################################
